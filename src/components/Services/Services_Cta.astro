@@ -1,0 +1,33 @@
+---
+import Button from "../common/Button.astro";
+import MessageIcon from "@icons/message-black.svg";
+interface Props {
+    title: string;
+    text: string;
+}
+const { title, text } = Astro.props;
+---
+
+<div class="cta-card">
+    <h2>{title}</h2>
+    <p>{text}</p>
+    <Button type="primary-white" href="/contact"
+        ><MessageIcon />Get a Free Quote Now</Button
+    >
+</div>
+
+<style>
+    .cta-card {
+        padding: 1.2rem 1rem;
+        background-color: var(--blue);
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        border-top: 4px solid white;
+        box-shadow: var(--box-shadow);
+    }
+    h2,
+    p {
+        color: white;
+    }
+</style>

@@ -1,0 +1,63 @@
+---
+import ServiceImage from "@images/sydney-garden-building-management.webp";
+import { Image } from "astro:assets";
+import ServicesWhy from "./Services_Why.astro";
+import ServicesCta from "./Services_Cta.astro";
+
+const reasonList = [
+    {
+        title: "Tailored Outdoor Care",
+        text: "Whether you need one-off landscaping or ongoing garden maintenance, we create a plan that suits your property.",
+    },
+    {
+        title: "Professional Results",
+        text: "Our team uses the right tools, techniques, and knowledge to ensure healthy, vibrant, and well-presented grounds.",
+    },
+    {
+        title: "Reliable Service",
+        text: "We pride ourselves on punctuality and consistency, keeping your outdoor spaces maintained without hassle.",
+    },
+];
+---
+
+<section class="section-dark">
+    <div class="container">
+        <h2>Landscaping & Garden Maintenance in Sydney</h2>
+        <p>
+            First impressions matter, a well-kept outdoor space says a lot about
+            your property. Amplify Facilities Management provides professional
+            landscaping and garden maintenance services across Sydney, helping
+            businesses, residential complexes, and commercial properties stay
+            inviting year-round. From lawn care and pruning to full landscaping
+            projects, we deliver reliable, high-quality results that keep your
+            outdoor areas looking their best.
+        </p>
+        <Image src={ServiceImage} alt="" class="service-image" />
+        <ServicesWhy
+            reasons={reasonList}
+            title="Why Choose Amplify for Landscaping & Garden Maintenance?"
+        />
+        <ServicesCta
+            title="Enhance Your Property with Expert Landscaping"
+            text="Keep your gardens and outdoor spaces looking professional, safe, and welcoming. Contact Amplify Facilities Management today to book your landscaping and garden maintenance service."
+        />
+    </div>
+</section>
+
+<style>
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .service-image {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        height: auto;
+        object-fit: cover;
+        border-left: 1.3rem solid var(--blue);
+        border-top: 1.3rem solid var(--blue);
+        box-sizing: border-box;
+        margin: 2rem 0px;
+    }
+</style>

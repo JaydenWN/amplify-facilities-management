@@ -1,0 +1,122 @@
+---
+import { Image } from "astro:assets";
+import placeholder from "../../../public/placeholder.svg";
+import ValueOne from "@icons/value-1.svg";
+import ValueTwo from "@icons/value-2.svg";
+import ValueThree from "@icons/value-3.svg";
+---
+
+<section class="section-dark">
+    <div class="container">
+        <h2>Why Sydney Businesses Choose Amplify Facilities Management</h2>
+        <p>
+            Our clients across Sydney trust Amplify Facilities Management to
+            deliver reliable building management, property maintenance,
+            commercial cleaning, landscaping, and security services. Our values
+            define how we work and the results we deliver.
+        </p>
+        <div class="values">
+            <div class="value">
+                <Image src={ValueOne} alt="" class="value-image" />
+                <h3>Reliability You Can Count On</h3>
+                <p>
+                    We provide consistent facilities management services Sydney
+                    businesses, strata groups, and property owners can rely on.
+                    Whether it’s daily cleaning, landscaping, or urgent building
+                    support, our team is always ready.
+                </p>
+            </div>
+
+            <div class="value">
+                <Image src={ValueTwo} alt="" class="value-image" />
+                <h3>Commitment to Quality</h3>
+                <p>
+                    From commercial cleaning and building management to advanced
+                    security and CCTV installation, every service is delivered
+                    with precision, professionalism, and attention to detail.
+                </p>
+            </div>
+
+            <div class="value">
+                <Image src={ValueThree} alt="" class="value-image" />
+                <h3>Trust & Transparency</h3>
+                <p>
+                    Our reputation in Sydney is built on open communication and
+                    long-term relationships. We treat every property and every
+                    client with the respect they deserve.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .value {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+    .value p {
+        width: 80%;
+    }
+    .value-image {
+        object-fit: cover;
+    }
+    .values {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+        margin-top: 2rem;
+    }
+    @media (min-width: 768px) {
+        .value p {
+            grid-area: value-text;
+            width: 380px;
+        }
+        h3 {
+            grid-area: title;
+        }
+        .value-image {
+            width: 100px;
+            height: 100px;
+            grid-area: image;
+            margin-right: 1rem;
+        }
+        .value {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            grid-template-areas:
+                "image title"
+                "image value-text";
+            text-align: left;
+        }
+        .values {
+            gap: 6rem;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .value {
+            width: calc(50% - 2rem);
+            box-sizing: border-box;
+        }
+        .value p {
+            width: auto;
+        }
+        .values {
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 4rem;
+        }
+        .container {
+            gap: 6rem;
+        }
+    }
+</style>

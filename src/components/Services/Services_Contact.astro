@@ -1,0 +1,99 @@
+---
+import ContactForm from "../common/Contact_Form.astro";
+---
+
+<section>
+    <div class="container">
+        <div class="contact-head">
+            <h2>Get in Touch with Amplify Facilities Management</h2>
+            <p>
+                From building management to cleaning, security, and landscaping,
+                our team is here to provide reliable, tailored solutions across
+                Sydney. Tell us about your property needs and we’ll create a
+                management plan that works for you. Fill out the form below and
+                our team will get back to you promptly.
+            </p>
+        </div>
+        <div class="form">
+            <ContactForm type="dark" />
+        </div>
+
+        <div class="contact-information">
+            <div class="info-header">
+                <h3>Get in Touch Directly</h3>
+            </div>
+
+            <div class="info">
+                <h4>Phone</h4>
+                <a href="tel:">+041 232 234</a>
+            </div>
+
+            <div class="info">
+                <h4>Email</h4>
+                <a href="mailto:info@amplifyfm.com">info@amplifyfm.com</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    h2 {
+        font-size: 1.65em;
+        margin-bottom: 2rem;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .contact-information {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+    .info-header {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    h3 {
+        font-size: 1.35em;
+    }
+    h4 {
+        margin-bottom: 1rem;
+    }
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    @media (min-width: 768px) {
+        .contact-head {
+            grid-area: contact-head;
+        }
+        .form {
+            grid-area: form;
+        }
+        .contact-information {
+            grid-area: info;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas:
+                "contact-head form"
+                "info form";
+            gap: 1rem;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .container {
+            gap: 6rem;
+        }
+        .form {
+            max-width: 440px;
+        }
+    }
+</style>

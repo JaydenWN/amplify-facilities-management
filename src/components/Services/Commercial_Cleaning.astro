@@ -1,0 +1,63 @@
+---
+import ServiceImage from "@images/sydney-building-management-cleaning.webp";
+import { Image } from "astro:assets";
+import ServicesWhy from "./Services_Why.astro";
+import ServicesCta from "./Services_Cta.astro";
+
+const reasonList = [
+    {
+        title: "Tailored Cleaning Plans",
+        text: "We create schedules and checklists that suit your workplace, ensuring consistent results without disruption.",
+    },
+    {
+        title: "Trusted Professionals",
+        text: "Our cleaners are fully trained, background-checked, and committed to delivering reliable service.",
+    },
+    {
+        title: "Health & Safety Focused",
+        text: "We use safe, eco-conscious cleaning products and practices that promote a hygienic and safe environment.",
+    },
+];
+---
+
+<section class="section-dark">
+    <div class="container">
+        <h2>Commercial Cleaning Services in Sydney</h2>
+        <p>
+            A clean workplace sets the standard for professionalism and creates
+            a healthier environment for staff and visitors. Amplify Facilities
+            Management delivers high-quality commercial cleaning services across
+            Sydney, tailored to businesses of every size. Whether you need daily
+            office cleaning, deep sanitisation, or specialised cleaning for
+            high-traffic areas, our team uses proven methods and eco-friendly
+            products to keep your premises spotless and compliant.
+        </p>
+        <Image src={ServiceImage} alt="" class="service-image" />
+        <ServicesWhy
+            reasons={reasonList}
+            title="Why Choose Amplify for Commercial Cleaning?"
+        />
+        <ServicesCta
+            title="Keep Your Workplace Clean and Professional"
+            text="Give your staff and visitors the benefit of a spotless environment. Contact Amplify Facilities Management today for a customised commercial cleaning plan."
+        />
+    </div>
+</section>
+
+<style>
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .service-image {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        height: auto;
+        object-fit: cover;
+        border-left: 1.3rem solid var(--blue);
+        border-top: 1.3rem solid var(--blue);
+        box-sizing: border-box;
+        margin: 2rem 0px;
+    }
+</style>

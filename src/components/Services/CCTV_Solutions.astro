@@ -1,0 +1,64 @@
+---
+import ServiceImage from "@images/sydney-cctv-security-building-management.webp";
+import { Image } from "astro:assets";
+import ServicesWhy from "./Services_Why.astro";
+import ServicesCta from "./Services_Cta.astro";
+
+const reasonList = [
+    {
+        title: "Tailored Security Systems",
+        text: "We design CCTV and monitoring setups that match the unique layout and needs of your property.",
+    },
+    {
+        title: "Cutting-Edge Technology",
+        text: "From HD surveillance to remote access and smart monitoring, we install the latest reliable equipment.",
+    },
+    {
+        title: "Local Expertise",
+        text: "Based in Sydney, our team understands the security challenges businesses and property owners face in the metro area.",
+    },
+];
+---
+
+<section>
+    <div class="container">
+        <h2>Security & CCTV Solutions in Sydney</h2>
+        <p>
+            Protecting your property, people, and assets starts with reliable
+            security. Amplify Facilities Management provides professional CCTV
+            installation and security solutions across Sydney, giving you peace
+            of mind 24/7. Whether you’re managing a commercial building, retail
+            space, or residential property, our systems are designed to deter
+            threats, monitor activity, and provide clear evidence when needed.
+            With the latest technology and expert installation, we make security
+            simple and effective.
+        </p>
+        <Image src={ServiceImage} alt="" class="service-image" />
+        <ServicesWhy
+            reasons={reasonList}
+            title="Why Choose Amplify for Security & CCTV?"
+        />
+        <ServicesCta
+            title="Secure Your Property with Confidence"
+            text="Don’t leave safety to chance. Protect your assets with expert CCTV and security services. Contact Amplify Facilities Management today for a security solution that fits your needs."
+        />
+    </div>
+</section>
+
+<style>
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .service-image {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        height: auto;
+        object-fit: cover;
+        border-left: 1.3rem solid var(--blue);
+        border-top: 1.3rem solid var(--blue);
+        box-sizing: border-box;
+        margin: 2rem 0px;
+    }
+</style>

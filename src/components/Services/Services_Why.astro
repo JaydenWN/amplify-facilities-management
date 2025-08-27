@@ -1,0 +1,56 @@
+---
+import CheckmarkIcon from "@icons/checkmark-blue.svg";
+interface Props {
+    reasons: {
+        title: string;
+        text: string;
+    }[];
+    title: string;
+}
+const { reasons, title } = Astro.props;
+---
+
+<div class="why-section">
+    <h3>{title}</h3>
+    <div class="cards">
+        {
+            reasons.map((reason) => (
+                <div class="reason-card">
+                    <CheckmarkIcon class="icon" />
+                    <div class="text">
+                        <h4>{reason.title}</h4>
+                        <p>{reason.text}</p>
+                    </div>
+                </div>
+            ))
+        }
+    </div>
+</div>
+
+<style>
+    .why-section {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .reason-card {
+        display: flex;
+        gap: 1rem;
+    }
+    h3 {
+        text-align: center;
+    }
+    h4 {
+        font-size: 1.125em;
+    }
+    .icon {
+        min-width: 25px;
+        height: 25px;
+    }
+    .cards {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        margin-top: 1rem;
+    }
+</style>

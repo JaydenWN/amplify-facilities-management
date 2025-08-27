@@ -1,0 +1,97 @@
+---
+import LocationIcon from "@icons/location-blue.svg";
+---
+
+<section>
+    <div class="container">
+        <h2>Facilities Management Services Across Sydney</h2>
+        <p>
+            Amplify Facilities Management proudly delivers building and
+            facilities management services across the Sydney metropolitan area.
+            Whether you’re based in the north, south, east, or west of the city,
+            our team provides tailored solutions to keep your property running
+            smoothly.
+        </p>
+
+        <div class="cards">
+            <div class="location-card">
+                <LocationIcon class="icon" />
+                <div class="text">
+                    <h3>Sydney CBD & Inner City</h3>
+                    <p>Ultimo, Surry Hills, Pyrmont, Darlinghurst</p>
+                </div>
+            </div>
+
+            <div class="location-card">
+                <LocationIcon class="icon" />
+                <div class="text">
+                    <h3>North Sydney & North Shore</h3>
+                    <p>Chatswood, North Sydney, St Leonards, Lane Cove</p>
+                </div>
+            </div>
+
+            <div class="location-card">
+                <LocationIcon class="icon" />
+                <div class="text">
+                    <h3>Eastern Suburbs</h3>
+                    <p>Bondi, Randwick, Coogee, Double Bay</p>
+                </div>
+            </div>
+
+            <div class="location-card">
+                <LocationIcon class="icon" />
+                <div class="text">
+                    <h3>Western Sydney</h3>
+                    <p>Parramatta, Blacktown, Penrith, Liverpool</p>
+                </div>
+            </div>
+
+            <div class="location-card">
+                <LocationIcon class="icon" />
+                <div class="text">
+                    <h3>Southern Sydney & St George</h3>
+                    <p>Hurstville, Kogarah, Rockdale, Sans Souci</p>
+                </div>
+            </div>
+
+            <div class="location-card">
+                <LocationIcon class="icon" />
+                <div class="text">
+                    <h3>South West Sydney</h3>
+                    <p>Campbelltown, Ingleburn, Prestons, Leppington</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .cards {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .location-card {
+        display: flex;
+        gap: 1rem;
+        padding: 1rem;
+        border: 1px solid var(--blue);
+        border-bottom: 4px solid var(--blue);
+        box-shadow: var(--box-shadow);
+    }
+    .icon {
+        width: 40px;
+        min-width: 40px;
+    }
+    .text {
+        display: flex;
+        flex-direction: column;
+        gap: 0.3rem;
+        padding-top: 0.3rem;
+    }
+</style>

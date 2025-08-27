@@ -1,0 +1,18 @@
+---
+import SubHero from "../components/common/Sub_Hero.astro";
+import ContactDirect from "../components/Contact/Contact_Direct.astro";
+import ContactSection from "../components/Contact/Contact_Section.astro";
+import ContactSocials from "../components/Contact/Contact_Socials.astro";
+import Layout from "../layouts/Base_Layout.astro";
+---
+
+<Layout title="Contact" description="Lorem ipsum dolor sit amet">
+    <SubHero
+        title="Contact Amplify Facilities Management in Sydney"
+        subtitle="Get fast, reliable support for building management, facilities maintenance, commercial cleaning, landscaping and CCTV security across Greater Sydney."
+        text="Our team is here to help with all your facility and building management needs. Whether you need urgent support, ongoing maintenance, or a tailored service plan, Amplify Facilities Management delivers trusted solutions for strata, commercial and industrial properties. We proudly service Sydney CBD, North Shore, Eastern Suburbs, Inner West, Northern Beaches, Western Sydney, South Sydney and the Sutherland Shire."
+    />
+    <ContactSection />
+    <ContactDirect />
+    <ContactSocials />
+</Layout>

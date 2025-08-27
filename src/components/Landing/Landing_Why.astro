@@ -1,0 +1,132 @@
+---
+import Button from "../common/Button.astro";
+import { Image } from "astro:assets";
+import placeholder from "@icons/hand-check-blue.svg";
+import MessageIcon from "@icons/message-white.svg";
+import CallIcon from "@icons/call-black.svg";
+---
+
+<section>
+    <div class="container">
+        <div class="why-header">
+            <h2>Why Choose Amplify Facilities Management in Sydney</h2>
+            <p>
+                When it comes to facilities and building management in Sydney,
+                choosing the right partner makes all the difference. Amplify
+                Facilities Management delivers reliable, professional, and
+                tailored services designed to keep your property safe, clean,
+                and running efficiently.
+            </p>
+            <div class="cta-buttons">
+                <Button href="tel:" type="secondary-dark"
+                    ><CallIcon /> Call Us</Button
+                >
+                <Button href="tel:" type="primary"
+                    ><MessageIcon /> Get a Free Quote Now</Button
+                >
+            </div>
+        </div>
+
+        <div class="reasons">
+            <div class="reason">
+                <Image src={placeholder} alt="" class="image" />
+                <h3>Local Expertise</h3>
+                <p>
+                    We understand the unique needs of Sydney properties, from
+                    commercial buildings in the CBD to strata complexes across
+                    the suburbs. Our local knowledge ensures fast response times
+                    and customised solutions.
+                </p>
+            </div>
+
+            <div class="reason">
+                <Image src={placeholder} alt="" class="image" />
+                <h3>Complete Service Offering</h3>
+                <p>
+                    Instead of juggling multiple contractors, we provide
+                    everything under one roof; building management, cleaning,
+                    security, and landscaping. This streamlined approach saves
+                    you time and ensures consistency across every service.
+                </p>
+            </div>
+
+            <div class="reason">
+                <Image src={placeholder} alt="" class="image" />
+                <h3>Commitment to Quality</h3>
+                <p>
+                    Our team takes pride in delivering high standards in every
+                    task. Whether it’s routine maintenance, advanced security
+                    installations, or detailed cleaning, we focus on long-term
+                    value and professional results.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    h2 {
+        font-size: 1.65em;
+    }
+    .why-header {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .cta-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.6rem;
+    }
+
+    .reasons {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+        margin-top: 4rem;
+    }
+    .reason {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .image {
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+    }
+
+    @media (min-width: 768px) {
+        .reason {
+            width: calc(50% - 2rem);
+            box-sizing: border-box;
+        }
+        .reasons {
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 4rem;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .container {
+            display: grid;
+            grid-template-columns: 0.65fr 1fr;
+            grid-template-areas: "why-header reasons";
+            gap: 3rem;
+        }
+        .why-header {
+            grid-area: why-header;
+        }
+        .reasons {
+            grid-area: reasons;
+            gap: 4rem;
+            margin-top: 0px;
+        }
+    }
+</style>

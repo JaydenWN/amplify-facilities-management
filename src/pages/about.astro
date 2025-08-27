@@ -1,0 +1,20 @@
+---
+import AboutAreas from "../components/About/About_Areas.astro";
+import AboutWho from "../components/About/About_Who.astro";
+import AboutWhy from "../components/About/About_Why.astro";
+import AboutContact from "../components/About/About_Contact.astro";
+import SubHero from "../components/common/Sub_Hero.astro";
+import Layout from "../layouts/Base_Layout.astro";
+---
+
+<Layout title="About Me" description="Lorem ipsum dolor sit amet">
+	<SubHero
+		title="About Amplify Facilities Management"
+		subtitle="Sydney’s Trusted Facilities & Building Management Partner"
+		text="At Amplify Facilities Management, we provide comprehensive facilities management services across Sydney, covering commercial and residential building management, cleaning, landscaping, and security solutions. Our team is committed to reliability, transparency, and quality, ensuring every property is safe, efficient, and well-presented while taking the stress out of management so owners, tenants, and managers can focus on what matters most."
+	/>
+	<AboutWho />
+	<AboutWhy />
+	<AboutAreas />
+	<AboutContact />
+</Layout>

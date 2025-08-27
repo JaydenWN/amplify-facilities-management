@@ -1,0 +1,63 @@
+---
+import ServiceImage from "@images/facilities-management-sydney.webp";
+import { Image } from "astro:assets";
+import ServicesWhy from "./Services_Why.astro";
+import ServicesCta from "./Services_Cta.astro";
+
+const reasonList = [
+    {
+        title: "Expert Oversight",
+        text: "Our managers coordinate all aspects of your property, from contractors to compliance, so nothing gets overlooked.",
+    },
+    {
+        title: "Cost Efficiency",
+        text: "By streamlining operations and implementing preventative maintenance, we reduce long-term repair costs and improve building value.",
+    },
+    {
+        title: "Reliable Support",
+        text: "With a Sydney-based team available when you need us, you can count on responsive service and clear communication.",
+    },
+];
+---
+
+<section>
+    <div class="container">
+        <h2>Building Management Services in Sydney</h2>
+        <p>
+            Managing a building requires attention to detail, proactive
+            maintenance, and a reliable partner who understands your needs.
+            Amplify Facilities Management offers tailored building management
+            solutions designed to keep your property operating at its best. From
+            day-to-day operations to preventative maintenance and compliance,
+            our experienced team ensures that your building is safe, efficient,
+            and welcoming for tenants, staff, and visitors alike.
+        </p>
+        <Image src={ServiceImage} alt="" class="service-image" />
+        <ServicesWhy
+            reasons={reasonList}
+            title="Why Choose Amplify for Building Management?"
+        />
+        <ServicesCta
+            title="Ready to Simplify Building Management?"
+            text="Let Amplify Facilities Management take the stress out of managing your property. Let Amplify Facilities Management take the stress out of managing your property. "
+        />
+    </div>
+</section>
+
+<style>
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .service-image {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        height: auto;
+        object-fit: cover;
+        border-left: 1.3rem solid var(--blue);
+        border-top: 1.3rem solid var(--blue);
+        box-sizing: border-box;
+        margin: 2rem 0px;
+    }
+</style>

@@ -1,0 +1,94 @@
+---
+import LandingServicesCard from "./Landing_Services_Card.astro";
+import placeholder from "../../../public/placeholder.svg";
+import BuildingManagement from "@images/facilities-management-sydney.webp";
+import CommercialCleaning from "@images/sydney-building-management-cleaning.webp";
+import Cctv from "@images/sydney-cctv-security-building-management.webp";
+import LandscapeGardening from "@images/sydney-garden-building-management.webp";
+---
+
+<section>
+    <div class="container">
+        <div class="section-header">
+            <h2>Our Facilities Management Services in Sydney</h2>
+            <p>
+                Amplify Facilities Management offers a full range of property
+                and building management services across the Sydney metropolitan
+                area. Whether you need ongoing facilities management,
+                professional cleaning, secure CCTV installation, or landscaping
+                solutions, our team delivers reliable support that keeps your
+                property safe, clean, and well maintained.
+            </p>
+        </div>
+
+        <div class="service-list">
+            <LandingServicesCard
+                title="Building Management"
+                text="Our Sydney building management services cover everything from day-to-day operations to long-term asset care. We make sure your property runs smoothly, tenants are supported, and compliance is always met."
+                image={BuildingManagement}
+            />
+
+            <LandingServicesCard
+                title="Commercial Cleaning"
+                text="We deliver professional commercial cleaning services in Sydney for offices, strata buildings, and retail spaces. Our team ensures your property is hygienic, welcoming, and maintained to the highest standards."
+                image={CommercialCleaning}
+            />
+
+            <LandingServicesCard
+                title="Security & CCTV"
+                text="Protect your property with trusted security solutions. We design and install CCTV systems across Sydney, helping businesses and strata properties improve safety and peace of mind."
+                image={Cctv}
+            />
+
+            <LandingServicesCard
+                title="Landscaping & Grounds Maintenance"
+                text="Our landscaping services keep Sydney properties looking their best year-round. From garden care to full grounds maintenance, we create professional outdoor spaces that make a lasting impression."
+                image={LandscapeGardening}
+            />
+        </div>
+    </div>
+</section>
+
+<style>
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+    }
+    .section-header {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .service-list {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    @media (min-width: 768px) {
+        .section-header {
+            text-align: center;
+            width: 75%;
+            margin: 0px auto;
+            gap: 4rem;
+        }
+        .service-list {
+            gap: 1rem;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        .container {
+            gap: 6rem;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .service-list {
+            flex-direction: column;
+            gap: 6rem;
+        }
+        .section-header {
+            width: 50%;
+        }
+    }
+</style>

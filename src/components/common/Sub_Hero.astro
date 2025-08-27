@@ -1,0 +1,50 @@
+---
+import Button from "./Button.astro";
+import PhoneIcon from "@icons/call-white.svg";
+import MessageIcon from "@icons/message-black.svg";
+interface Props {
+    title: string;
+    subtitle: string;
+    text: string;
+}
+const { title, subtitle, text } = Astro.props;
+---
+
+<header>
+    <div class="container">
+        <h1>{title}</h1>
+        <h2>{subtitle}</h2>
+        <p>{text}</p>
+        <div class="cta-buttons">
+            <Button href="tel:" type="secondary"><PhoneIcon />Call Us</Button>
+            <Button href="/contact" type="primary-white"
+                ><MessageIcon />Get a Free Quote Today</Button
+            >
+        </div>
+    </div>
+</header>
+
+<style>
+    header {
+        background-color: var(--blue);
+        color: white;
+    }
+    h1,
+    h2,
+    p {
+        color: white;
+    }
+    h2 {
+        font-size: 1em;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .cta-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+    }
+</style>

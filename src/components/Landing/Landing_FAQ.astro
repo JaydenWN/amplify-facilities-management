@@ -1,0 +1,72 @@
+---
+import { Image } from "astro:assets";
+import FAQ from "../common/FAQ.astro";
+import placeholder from "@images/building-facilities-management-faq.webp";
+
+const qaObject = [
+    {
+        q: "What areas of Sydney do you service?",
+        a: "We provide facilities management services across the entire Sydney metropolitan area, including the North Shore, Eastern Suburbs, Inner West, Western Sydney, and South Sydney.",
+    },
+    {
+        q: "Can you manage both residential and commercial properties?",
+        a: "Absolutely. We work with strata buildings, commercial properties, office spaces, and mixed-use developments across Sydney.",
+    },
+    {
+        q: "What are building management services?",
+        a: "Building management services cover the day-to-day operation, maintenance, and safety of a property. In Sydney, this often includes cleaning, security, repairs, tenant support, compliance checks, and coordinating trades to keep the building running smoothly.",
+    },
+    {
+        q: "Why use a building management company?",
+        a: "Using a professional building management company ensures your property is well maintained, secure, and cost-efficient. In Sydney, businesses and strata groups choose building management companies like Amplify Facilities Management to save time, reduce stress, and ensure compliance with regulations.",
+    },
+];
+---
+
+<section class="section-dark">
+    <div class="container">
+        <h2>Frequently Asked Questions</h2>
+        <FAQ qaObject={qaObject} class="faq" />
+        <Image src={placeholder} alt="" class="image" />
+    </div>
+</section>
+
+<style>
+    h2 {
+        font-size: 1.65em;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .image {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        aspect-ratio: 1 / 1;
+        box-shadow: var(--box-shadow);
+    }
+
+    @media (min-width: 768px) {
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas:
+                "title title"
+                "image faq";
+            gap: 2rem;
+        }
+        .image {
+            grid-area: image;
+        }
+        .faq {
+            grid-area: faq;
+        }
+        h2 {
+            grid-area: title;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+    }
+</style>

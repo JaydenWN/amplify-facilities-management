@@ -1,0 +1,162 @@
+---
+const today = new Date();
+import placeholder from "@icons/logo-footer.svg";
+import { Image } from "astro:assets";
+import CallIcon from "@icons/phone-contact-white.svg";
+import MailIcon from "@icons/email-white.svg";
+import FacebookIcon from "@icons/footer-facebook.svg";
+import InstagramIcon from "@icons/footer-instagram.svg";
+import LinkedInIcon from "@icons/footer-linkedin.svg";
+---
+
+<footer>
+	<div class="footer-container">
+		<Image src={placeholder} alt="" class="image" />
+
+		<div class="links">
+			<div class="site-nav">
+				<h3>Site Navigation</h3>
+				<ul>
+					<li>
+						<a href="/">Home</a>
+					</li>
+					<li>
+						<a href="/">Services</a>
+					</li>
+					<li>
+						<a href="/">About</a>
+					</li>
+					<li>
+						<a href="/">Contact</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="social-links">
+				<h3>Social Links</h3>
+				<ul>
+					<li>
+						<a href="/"> <FacebookIcon class="icon" />Facebook</a>
+					</li>
+					<li>
+						<a href="/"><InstagramIcon class="icon" />Instagram</a>
+					</li>
+					<li>
+						<a href="/"><LinkedInIcon class="icon" />LinkedIn</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="contact-details">
+				<h3>Contact Details</h3>
+				<ul>
+					<li>
+						<a href="tel:"><CallIcon class="icon" />+0412 232 242</a
+						>
+					</li>
+					<li>
+						<a href="mailto:"
+							><MailIcon class="icon" />info@amplifyfm.com</a
+						>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<span class="beachside-link">
+			<a href="https://www.beachsidewebdesigns.com"
+				>&copy; {today.getFullYear()} Beachside Web Designs.</a
+			>
+		</span>
+	</div>
+</footer>
+
+<style>
+	footer {
+		background-color: var(--font-color);
+	}
+	.footer-container {
+		padding: 2rem 1rem;
+		display: flex;
+		flex-direction: column;
+		gap: 3rem;
+	}
+	.links {
+		display: flex;
+		flex-direction: column;
+		gap: 4rem;
+	}
+	.image {
+		opacity: 0.3;
+		width: 40%;
+		height: auto;
+		object-fit: contain;
+	}
+	.icon {
+		width: 25px;
+		height: 25px;
+		object-fit: contain;
+	}
+	ul {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
+
+	h3 {
+		color: white;
+		margin-bottom: 1rem;
+	}
+	a {
+		text-decoration: none;
+		color: white;
+		display: flex;
+		gap: 0.5rem;
+		align-items: center;
+	}
+
+	.beachside-link > a {
+		justify-content: center;
+	}
+
+	@media (min-width: 768px) {
+		.image {
+			max-width: 250px;
+		}
+		.footer-container {
+			padding: 4rem 4rem 1rem 4rem;
+		}
+		.site-nav {
+			grid-area: site-nav;
+		}
+		.social-links {
+			grid-area: social;
+		}
+		.contact-details {
+			grid-area: contact;
+		}
+		.links {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-template-areas:
+				"site-nav social"
+				"contact contact";
+		}
+	}
+	@media (min-width: 1024px) {
+		.links {
+			grid-template-columns: 250px 250px 250px;
+			grid-template-areas: "site-nav social contact";
+			margin-top: 2rem;
+		}
+
+		a {
+			opacity: 0.8;
+			transition: all 0.25s;
+		}
+
+		a:hover {
+			padding-left: 0.6rem;
+			opacity: 1;
+		}
+	}
+</style>
