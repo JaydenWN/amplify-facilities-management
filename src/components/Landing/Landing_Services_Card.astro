@@ -40,27 +40,40 @@ import MessageIcon from "@icons/message-white.svg";
 
     @media (min-width: 768px) {
         .service-card {
-            width: calc(50% - 1rem);
+            display: grid;
             box-sizing: border-box;
+            grid-template-rows: subgrid;
+            grid-row: span 4;
         }
         .text-content {
-            padding: 2rem;
+            display: contents;
+        }
+        .service-card h3 {
+            margin: 1rem 1rem 0px 1rem;
+        }
+        .service-card p {
+            margin: 0px 1rem;
+        }
+        .service-card :global(a) {
+            margin: 1rem;
         }
     }
 
     @media (min-width: 1024px) {
-        .service-card {
-            flex-direction: row;
-            width: 100%;
-            max-width: 865px;
-            margin: 0px auto;
+        .service-card h3 {
+            margin: 1rem 2rem 2rem 2rem;
         }
-        .image {
-            height: auto;
-            width: 45%;
+        .service-card p {
+            margin: 0px 2rem;
         }
-        .text-content {
-            padding: 3rem;
+        .service-card :global(a) {
+            margin: 2rem;
+        }
+    }
+
+    @media (min-width: 1440px) {
+        .service-card h3 {
+            margin: 1rem 2rem 0px 2rem;
         }
     }
 </style>

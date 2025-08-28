@@ -14,7 +14,7 @@ import ClockIcon from "@icons/hour-white.svg";
             today and we’ll make sure your property is in safe hands.
         </p>
 
-        <div class="cards">
+        <div class="cards contact-cards">
             <div class="card">
                 <PhoneIcon />
                 <div class="text">
@@ -113,5 +113,32 @@ import ClockIcon from "@icons/hour-white.svg";
         flex-direction: column;
         gap: 2rem;
         margin-top: 4rem;
+    }
+
+    @media (min-width: 768px) {
+        .container {
+            gap: 4rem;
+        }
+        .cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .cards h3 {
+            font-size: 1.125em;
+        }
+    }
+
+    @media (min-width: 1440px) {
+        h2 {
+            text-align: center;
+        }
+        .container > p {
+            width: 680px;
+            text-align: center;
+            margin: 0px auto;
+        }
     }
 </style>

@@ -79,4 +79,27 @@ import LinkedInIcon from "@icons/linked-in-blue.svg";
         text-decoration: none;
         color: var(--font-color);
     }
+    @media (min-width: 768px) {
+        .container {
+            gap: 4rem;
+        }
+        .cards {
+            width: fit-content;
+        }
+        .card {
+            padding: 2rem;
+            gap: 2rem;
+        }
+    }
+
+    @media (min-width: 1440px) {
+        h2 {
+            text-align: center;
+        }
+        .container > p {
+            text-align: center;
+            width: 680px;
+            margin: 0px auto 2rem auto;
+        }
+    }
 </style>

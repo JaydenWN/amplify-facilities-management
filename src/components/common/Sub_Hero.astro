@@ -47,4 +47,11 @@ const { title, subtitle, text } = Astro.props;
         flex-wrap: wrap;
         gap: 0.8rem;
     }
+
+    @media (min-width: 768px) {
+        .container > p {
+            width: 70%;
+            margin: 2rem 0px;
+        }
+    }
 </style>

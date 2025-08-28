@@ -77,46 +77,74 @@ import ValueThree from "@icons/value-3.svg";
     }
     @media (min-width: 768px) {
         .value p {
-            grid-area: value-text;
-            width: 380px;
+            grid-column: 1 / 3;
+            width: 100%;
+        }
+        h2 {
+            text-align: center;
         }
         h3 {
-            grid-area: title;
+            grid-row: 2 / 3;
+            grid-column: 1 / 3;
         }
         .value-image {
-            width: 100px;
-            height: 100px;
-            grid-area: image;
+            grid-column: 1 / 3;
+            grid-row: 1 / 2;
+            width: 130px;
+            height: 130px;
             margin-right: 1rem;
         }
         .value {
             display: grid;
-            grid-template-columns: auto 1fr;
-            grid-template-areas:
-                "image title"
-                "image value-text";
+            grid-template-columns: 1fr;
             text-align: left;
+            padding: 4rem;
+            gap: 2rem;
+            box-shadow: var(--box-shadow);
+            background-color: white;
         }
         .values {
-            gap: 6rem;
+            gap: 2rem;
+        }
+        .container {
+            gap: 4rem;
+        }
+        .container > p {
+            max-width: 680px;
+            text-align: center;
+            margin: 0px auto;
         }
     }
 
     @media (min-width: 1024px) {
         .value {
-            width: calc(50% - 2rem);
             box-sizing: border-box;
+            padding: 2rem;
+            display: grid;
+            grid-template-rows: subgrid;
+            grid-row: span 3;
         }
         .value p {
             width: auto;
         }
         .values {
-            flex-direction: row;
-            flex-wrap: wrap;
-            gap: 4rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
         }
         .container {
-            gap: 6rem;
+            gap: 4rem;
+        }
+
+        .value:last-of-type {
+            grid-column: 1 / 3;
+            padding: 3rem;
+        }
+    }
+
+    @media (min-width: 1440px) {
+        .values {
+            gap: 4rem;
         }
     }
 </style>

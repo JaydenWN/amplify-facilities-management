@@ -94,4 +94,33 @@ import LocationIcon from "@icons/location-blue.svg";
         gap: 0.3rem;
         padding-top: 0.3rem;
     }
+
+    @media (min-width: 768px) {
+        .cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            margin-top: 4rem;
+        }
+        .text p {
+            margin-top: auto;
+        }
+        .container {
+            gap: 3rem;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        h3 {
+            font-size: 1.3em;
+            margin-bottom: 1rem;
+        }
+        h2 {
+            text-align: center;
+        }
+        .container > p {
+            width: 680px;
+            margin: 0px auto;
+            text-align: center;
+        }
+    }
 </style>

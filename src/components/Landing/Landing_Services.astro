@@ -68,14 +68,17 @@ import LandscapeGardening from "@images/sydney-garden-building-management.webp";
     @media (min-width: 768px) {
         .section-header {
             text-align: center;
-            width: 75%;
             margin: 0px auto;
             gap: 4rem;
         }
+        .section-header > p {
+            max-width: 630px;
+            margin: 0px auto;
+        }
         .service-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
             gap: 1rem;
-            flex-direction: row;
-            flex-wrap: wrap;
         }
         .container {
             gap: 6rem;
@@ -83,12 +86,13 @@ import LandscapeGardening from "@images/sydney-garden-building-management.webp";
     }
 
     @media (min-width: 1024px) {
-        .service-list {
-            flex-direction: column;
-            gap: 6rem;
-        }
         .section-header {
-            width: 50%;
+        }
+    }
+
+    @media (min-width: 1440px) {
+        .service-list {
+            gap: 4rem;
         }
     }
 </style>

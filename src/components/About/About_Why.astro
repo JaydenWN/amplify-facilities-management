@@ -14,7 +14,7 @@ import CheckmarkIcon from "@icons/checkmark-black.svg";
 
         <div class="cards">
             <div class="card">
-                <CheckmarkIcon />
+                <CheckmarkIcon class="icon" />
                 <h3>Local expertise</h3>
                 <p>
                     We know Sydney’s buildings, regulations, and contractors
@@ -23,7 +23,7 @@ import CheckmarkIcon from "@icons/checkmark-black.svg";
             </div>
 
             <div class="card">
-                <CheckmarkIcon />
+                <CheckmarkIcon class="icon" />
                 <h3>End-to-end services</h3>
                 <p>
                     From cleaning to CCTV installation, you don’t need multiple
@@ -32,7 +32,7 @@ import CheckmarkIcon from "@icons/checkmark-black.svg";
             </div>
 
             <div class="card">
-                <CheckmarkIcon />
+                <CheckmarkIcon class="icon" />
                 <h3>Commitment to quality</h3>
                 <p>
                     We prioritise efficiency, safety, and presentation across
@@ -62,5 +62,42 @@ import CheckmarkIcon from "@icons/checkmark-black.svg";
         gap: 1rem;
         align-items: center;
         text-align: center;
+    }
+
+    @media (min-width: 768px) {
+        .container {
+            gap: 4rem;
+        }
+        h2 {
+            text-align: center;
+        }
+        .card {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            column-gap: 2rem;
+            text-align: left;
+        }
+        .icon {
+            grid-column: 1 / 2;
+            grid-row: 1 / 3;
+        }
+        .card h3 {
+            grid-column: 2 / 3;
+        }
+        .card p {
+            grid-column: 2 / 3;
+        }
+    }
+    @media (min-width: 1024px) {
+        .cards {
+            gap: 6rem;
+            width: fit-content;
+            margin: 4rem auto;
+        }
+        .container > p {
+            width: 680px;
+            margin: 0px auto;
+            text-align: center;
+        }
     }
 </style>
