@@ -10,9 +10,116 @@ import Layout from "../layouts/Base_Layout.astro";
 ---
 
 <Layout
-	title="Amplify Facilities Management"
-	description="Lorem ipsum dolor sit amet"
+	title="Facilities Management Sydney | Amplify Building, Cleaning & Security"
+	description="Amplify Facilities Management provides expert building management, commercial cleaning, security solutions, and landscaping across Sydney. Trusted, reliable and tailored to your property needs."
 >
+	<script slot="head" type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@graph": [
+				{
+					"@type": "WebSite",
+					"name": "Amplify Facilities Management",
+					"url": "https://amplifyfm.com.au",
+					"potentialAction": {
+						"@type": "SearchAction",
+						"target": "https://amplifyfm.com.au/search?q={search_term_string}",
+						"query-input": "required name=search_term_string"
+					}
+				},
+				{
+					"@type": ["Organization", "LocalBusiness"],
+					"name": "Amplify Facilities Management",
+					"url": "https://amplifyfm.com.au",
+					"logo": "https://amplifyfm.com.au/logo.png",
+					"image": [
+						"https://amplifyfm.com.au/building-management-sydney.jpg"
+					],
+					"description": "Amplify Facilities Management provides building management, commercial cleaning, landscaping, and security solutions across Sydney.",
+					"areaServed": [
+						"Sydney CBD",
+						"Northern Beaches",
+						"Eastern Suburbs",
+						"Inner West",
+						"Western Sydney",
+						"South Sydney"
+					],
+					// "sameAs": [
+					// 	"https://www.facebook.com/yourpage",
+					// 	"https://www.linkedin.com/company/yourcompany"
+					// ],
+					"contactPoint": [
+						{
+							"@type": "ContactPoint",
+							"contactType": "customer service",
+							"telephone": "0450768657",
+							"areaServed": "AU"
+						}
+					]
+				},
+				{
+					"@type": "Service",
+					"name": "Building Management Sydney",
+					"serviceType": "Building Management",
+					"provider": {
+						"@type": "Organization",
+						"name": "Amplify Facilities Management",
+						"url": "https://amplifyfm.com.au/facilities-management-services-sydney"
+					},
+					"areaServed": "Sydney Metropolitan Area",
+					"description": "End-to-end building management for residential and commercial properties, including compliance, maintenance coordination, and tenant support."
+				},
+				{
+					"@type": "Service",
+					"name": "Commercial Cleaning Sydney",
+					"serviceType": "Commercial Cleaning",
+					"provider": {
+						"@type": "Organization",
+						"name": "Amplify Facilities Management",
+						"url": "https://amplifyfm.com.au/facilities-management-services-sydney"
+					},
+					"areaServed": "Sydney Metropolitan Area",
+					"description": "Routine and periodic cleaning for offices, strata, retail and industrial sites to maintain hygiene and presentation standards."
+				},
+				{
+					"@type": "Service",
+					"name": "Security & CCTV Setup Sydney",
+					"serviceType": "Security Services",
+					"provider": {
+						"@type": "Organization",
+						"name": "Amplify Facilities Management",
+						"url": "https://amplifyfm.com.au/facilities-management-services-sydney"
+					},
+					"areaServed": "Sydney Metropolitan Area",
+					"description": "CCTV planning and installation with monitoring-ready systems to improve site visibility and deter incidents."
+				},
+				{
+					"@type": "Service",
+					"name": "Landscaping & Grounds Maintenance Sydney",
+					"serviceType": "Landscaping",
+					"provider": {
+						"@type": "Organization",
+						"name": "Amplify Facilities Management",
+						"url": "https://amplifyfm.com.au/facilities-management-services-sydney"
+					},
+					"areaServed": "Sydney Metropolitan Area",
+					"description": "Lawn care, hedging, garden makeovers and strata grounds maintenance to keep properties neat and welcoming."
+				},
+				{
+					"@type": "BreadcrumbList",
+					"itemListElement": [
+						{
+							"@type": "ListItem",
+							"position": 1,
+							"name": "Home",
+							"item": "https://amplifyfm.com.au/"
+						}
+					]
+				}
+			]
+		}
+	</script>
+
 	<LandingHero1 />
 	<LandingMeet />
 	<LandingValues />

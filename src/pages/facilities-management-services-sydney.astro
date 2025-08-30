@@ -1,0 +1,135 @@
+---
+import SubHero from "../components/common/Sub_Hero.astro";
+import BuildingManagement from "../components/Services/Building_Management.astro";
+import CommercialCleaning from "../components/Services/Commercial_Cleaning.astro";
+import CCTVSolutions from "../components/Services/CCTV_Solutions.astro";
+import LandscapingServices from "../components/Services/Landscaping_Services.astro";
+import ServicesContact from "../components/Services/Services_Contact.astro";
+import Layout from "../layouts/Base_Layout.astro";
+---
+
+<Layout
+    title="Facilities Management Services Sydney | Building, Cleaning, Security & Landscaping"
+    description="Explore Amplify’s full range of facilities management services in Sydney — including building management, commercial cleaning, security CCTV setups, and landscaping solutions tailored to businesses and properties."
+>
+    <SubHero
+        title="Professional Building Facilities Management Services in Sydney"
+        subtitle="Comprehensive Building, Cleaning, Security & Landscaping Solutions"
+        text="At Amplify Facilities Management, we provide end-to-end solutions that keep your buildings running smoothly, your spaces secure, and your environment well-maintained. Serving businesses and property owners across Sydney’s North, East, South, and West, our expert team delivers tailored services in facilities management, commercial cleaning, CCTV security installations, and landscaping. With a focus on quality, reliability, and long-term value, we help you create safer, cleaner, and more efficient spaces."
+    />
+    <script slot="head" type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@graph": [
+                {
+                    "@type": "CollectionPage",
+                    "name": "Facilities Management Services Sydney",
+                    "url": "https://amplifyfm.com.au/facilities-management-services-sydney",
+                    "description": "Explore Amplify Facilities Management services including building management, commercial cleaning, security CCTV setup, and landscaping across Sydney."
+                },
+                {
+                    "@type": ["Organization", "LocalBusiness"],
+                    "name": "Amplify Facilities Management",
+                    "url": "https://amplifyfm.com.au",
+                    "logo": "https://amplifyfm.com.au/logo.png",
+                    "image": [
+                        "https://amplifyfm.com.au/building-management-sydney.jpg"
+                    ],
+                    "description": "Amplify Facilities Management provides building management, commercial cleaning, landscaping and security services across Sydney.",
+                    "areaServed": [
+                        "Sydney CBD",
+                        "Northern Beaches",
+                        "Eastern Suburbs",
+                        "Inner West",
+                        "Western Sydney",
+                        "South Sydney"
+                    ],
+                    // "sameAs": [
+                    //     "https://www.facebook.com/yourpage",
+                    //     "https://www.linkedin.com/company/yourcompany"
+                    // ],
+                    "contactPoint": [
+                        {
+                            "@type": "ContactPoint",
+                            "contactType": "customer service",
+                            "telephone": "0450768657",
+                            "areaServed": "AU"
+                        }
+                    ]
+                },
+                {
+                    "@type": "Service",
+                    "name": "Building Management Sydney",
+                    "serviceType": "Building Management",
+                    "provider": {
+                        "@type": "Organization",
+                        "name": "Amplify Facilities Management",
+                        "url": "https://amplifyfm.com.au"
+                    },
+                    "areaServed": "Sydney Metropolitan Area",
+                    "description": "End-to-end building management for residential and commercial properties, including compliance, maintenance coordination, and tenant support."
+                },
+                {
+                    "@type": "Service",
+                    "name": "Commercial Cleaning Sydney",
+                    "serviceType": "Commercial Cleaning",
+                    "provider": {
+                        "@type": "Organization",
+                        "name": "Amplify Facilities Management",
+                        "url": "https://amplifyfm.com.au"
+                    },
+                    "areaServed": "Sydney Metropolitan Area",
+                    "description": "Routine and periodic cleaning for offices, strata, retail and industrial sites to maintain hygiene and presentation standards."
+                },
+                {
+                    "@type": "Service",
+                    "name": "Security & CCTV Setup Sydney",
+                    "serviceType": "Security Services",
+                    "provider": {
+                        "@type": "Organization",
+                        "name": "Amplify Facilities Management",
+                        "url": "https://amplifyfm.com.au"
+                    },
+                    "areaServed": "Sydney Metropolitan Area",
+                    "description": "CCTV planning and installation with monitoring-ready systems to improve site visibility and deter incidents."
+                },
+                {
+                    "@type": "Service",
+                    "name": "Landscaping & Grounds Maintenance Sydney",
+                    "serviceType": "Landscaping",
+                    "provider": {
+                        "@type": "Organization",
+                        "name": "Amplify Facilities Management",
+                        "url": "https://amplifyfm.com.au"
+                    },
+                    "areaServed": "Sydney Metropolitan Area",
+                    "description": "Lawn care, hedging, garden makeovers and strata grounds maintenance to keep properties neat and welcoming."
+                },
+                {
+                    "@type": "BreadcrumbList",
+                    "itemListElement": [
+                        {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Home",
+                            "item": "https://amplifyfm.com.au/"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Services",
+                            "item": "https://amplifyfm.com.au/facilities-management-services-sydney"
+                        }
+                    ]
+                }
+            ]
+        }
+    </script>
+    <BuildingManagement />
+    <CommercialCleaning />
+    <CCTVSolutions />
+    <LandscapingServices />
+    <ServicesContact />
+</Layout>
+
+<!-- LOGO.png and building-management-services.jpg needed -->

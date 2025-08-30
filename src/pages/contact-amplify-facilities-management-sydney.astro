@@ -1,0 +1,82 @@
+---
+import SubHero from "../components/common/Sub_Hero.astro";
+import ContactDirect from "../components/Contact/Contact_Direct.astro";
+import ContactSection from "../components/Contact/Contact_Section.astro";
+import ContactSocials from "../components/Contact/Contact_Socials.astro";
+import Layout from "../layouts/Base_Layout.astro";
+---
+
+<Layout
+    title="Contact Amplify Facilities Management Sydney | Get a Free Quote"
+    description="Get in touch with Amplify Facilities Management in Sydney. Contact us today for expert building management, commercial cleaning, landscaping and security services tailored to your property."
+>
+    <script slot="head" type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@graph": [
+                {
+                    "@type": "ContactPage",
+                    "name": "Contact Amplify Facilities Management",
+                    "url": "https://amplifyfm.com.au/contact-amplify-facilities-management-sydney",
+                    "description": "Contact Amplify Facilities Management in Sydney for building management, commercial cleaning, landscaping and security services. Request a quote or ask a question."
+                },
+                {
+                    "@type": ["Organization", "LocalBusiness"],
+                    "name": "Amplify Facilities Management",
+                    "url": "https://amplifyfm.com.au",
+                    "logo": "https://amplifyfm.com.au/logo.png",
+                    "image": [
+                        "https://amplifyfm.com.au/building-management-sydney.jpg"
+                    ],
+                    "description": "Amplify Facilities Management provides building management, commercial cleaning, landscaping and security solutions across Sydney.",
+                    "areaServed": [
+                        "Sydney CBD",
+                        "Northern Beaches",
+                        "Eastern Suburbs",
+                        "Inner West",
+                        "Western Sydney",
+                        "South Sydney"
+                    ],
+                    // "sameAs": [
+                    //     "https://www.facebook.com/yourpage",
+                    //     "https://www.linkedin.com/company/yourcompany"
+                    // ],
+                    "contactPoint": [
+                        {
+                            "@type": "ContactPoint",
+                            "contactType": "customer service",
+                            "telephone": "0450768657",
+                            "areaServed": "AU",
+                            "availableLanguage": ["en-AU", "en"]
+                        }
+                    ]
+                },
+                {
+                    "@type": "BreadcrumbList",
+                    "itemListElement": [
+                        {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Home",
+                            "item": "https://amplifyfm.com.au/"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Contact",
+                            "item": "https://amplifyfm.com.au/contact-amplify-facilities-management-sydney"
+                        }
+                    ]
+                }
+            ]
+        }
+    </script>
+    <SubHero
+        title="Contact Amplify Facilities Management in Sydney"
+        subtitle="Get fast, reliable support for building management, facilities maintenance, commercial cleaning, landscaping and CCTV security across Greater Sydney."
+        text="Our team is here to help with all your facility and building management needs. Whether you need urgent support, ongoing maintenance, or a tailored service plan, Amplify Facilities Management delivers trusted solutions for strata, commercial and industrial properties. We proudly service Sydney CBD, North Shore, Eastern Suburbs, Inner West, Northern Beaches, Western Sydney, South Sydney and the Sutherland Shire."
+    />
+    <ContactSection />
+    <ContactDirect />
+    <ContactSocials />
+</Layout>
