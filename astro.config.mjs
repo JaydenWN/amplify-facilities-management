@@ -5,7 +5,7 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-	site: "https://amplify-facilities-management.vercel.app",
+	site: "https://amplifyfacilitiesmanagement.com",
 	integrations: [mdx(), sitemap()],
 	vite: {
 		resolve: {
