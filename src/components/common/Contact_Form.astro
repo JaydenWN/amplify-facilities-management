@@ -9,7 +9,12 @@ const { type = "light" } = Astro.props;
 const className = type;
 ---
 
-<form action="" class={`form form-${type}`}>
+<form
+    name="contact"
+    method="POST"
+    data-netlify="true"
+    class={`form form-${type}`}
+>
     <div class="input-area">
         <label for="name">Name</label>
         <input type="text" name="name" id="name" required />
